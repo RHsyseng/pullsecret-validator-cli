@@ -6,7 +6,7 @@ import (
 	"github.com/jedib0t/go-pretty/v6/table"
 )
 
-func ValidatePullSecret() {
+func ValidatePullSecret(filename string, registries []string) {
 
 }
 

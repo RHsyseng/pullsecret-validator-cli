@@ -11,8 +11,8 @@ import (
 func main() {
 
 	f := flag.String("f", "", "[Required param] - Pull Secret file in json format. Usage: '-f ./pull-secret.json'")
-	flag.Bool("v", false, "[Optional param] - Array of registry entries from the pull secret file to be validated. Usage: '-c quay.io cloud.openshift.io'")
-	h := flag.Bool("h", false, "Help usage example: './pullsecret-validator-command -f ./pull-secret.json -c quay.io cloud.openfhit.io' ")
+	flag.Bool("r", false, "[Optional param] - Array of registry entries from the pull secret file to be validated. Usage: '-r quay.io cloud.openshift.io'")
+	h := flag.Bool("h", false, "Help usage example: './pullsecret-validator-command -f ./pull-secret.json -r quay.io cloud.openfhit.io' ")
 	flag.Parse()
 	tail := flag.Args()
 
