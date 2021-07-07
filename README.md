@@ -35,7 +35,10 @@ If you want to validate **only a subset** of the whole pull secret file, you cou
 
 ## Output examples:
 
+![img/img_1.png](img/img_1.png)
 
+
+![img/img.png](img/img.png)
 
 ## Reference
 
