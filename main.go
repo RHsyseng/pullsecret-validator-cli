@@ -6,15 +6,6 @@ import (
 	"os"
 )
 
-func contains(s []string, str string) bool {
-	for _, v := range s {
-		if v == str {
-			return true
-		}
-	}
-	return false
-}
-
 func main() {
 
 	f := flag.String("f", "", "[Required param] - Pull Secret file in json format. Usage: '-f ./pull-secret.json'")
