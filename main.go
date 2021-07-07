@@ -4,7 +4,6 @@ import (
 	"flag"
 	"fmt"
 	"github.com/RHsyseng/pullsecret-validator-cli/command"
-
 	"os"
 )
 
@@ -27,6 +26,5 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println(tail, *f)
 	command.ValidatePullSecret(*f, tail)
 }

@@ -1,25 +1,21 @@
 package command
 
 import (
+	v "github.com/RHsyseng/lib-ps-validator"
+	"log"
 	"os"
-
-	"github.com/jedib0t/go-pretty/v6/table"
 )
 
-func ValidatePullSecret(filename string, registries []string) {
+func ValidatePullSecret(file string, registries []string) {
 
-}
+	input, err := readFromFile(file)
+	if err != nil {
+		log.Fatal(string(ColorRed), "Not possible validate the Pull Secret due to: "+err.Error())
+		os.Exit(500)
+	}
+	log.Println("Starting the Pull Secret file validation...It could take a time!")
+	result := v.Validate(input)
 
-func writeOutputTable() {
-	t := table.NewWriter()
-	t.SetOutputMirror(os.Stdout)
-	t.AppendHeader(table.Row{"#", "First Name", "Last Name", "Salary"})
-	t.AppendRows([]table.Row{
-		{1, "Arya", "Stark", 3000},
-		{20, "Jon", "Snow", 2000, "You know nothing, Jon Snow!"},
-	})
-	t.AppendSeparator()
-	t.AppendRow([]interface{}{300, "Tyrion", "Lannister", 5000})
-	t.AppendFooter(table.Row{"", "", "Total", 10000})
-	t.Render()
+	writeOutputTable(result, registries)
+
 }
