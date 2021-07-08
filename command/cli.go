@@ -5,8 +5,13 @@ import (
 	"log"
 	"os"
 )
+const(
+	OUTPUT_TABLE 	= "table"
+	OUTPUT_JSON		= "json"
+	OUTPUT_YAML		= "yaml"
+)
 
-func ValidatePullSecret(file string, registries []string) {
+func ValidatePullSecret(file string, outputFormat string) {
 
 	input, err := readFromFile(file)
 	if err != nil {
@@ -16,6 +21,16 @@ func ValidatePullSecret(file string, registries []string) {
 	log.Println("Starting the Pull Secret file validation...It could take a time!")
 	result := v.Validate(input)
 
-	writeOutputTable(result, registries)
+	switch outputFormat {
+	case OUTPUT_TABLE:
+		writeOutputTable(result)
+	case OUTPUT_JSON:
+		writeOutputJson(result)
+	case OUTPUT_YAML:
+		writeOutputYaml(result)
+	default:
+		writeOutputTable(result)
+	}
+
 
 }

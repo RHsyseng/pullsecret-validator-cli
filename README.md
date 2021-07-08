@@ -27,10 +27,17 @@ To validate the pull secret file use the path/filename structure with the -f fla
 ./pullsecret-validator-cli -f /home/alknopfler/pull-secret.json
 ```
 
+## Output 
+Output formats available:
 
-If you want to validate **only a subset** of the whole pull secret file, you could use the flag "-r" :
+- table
+- json
+- yaml
+
+By default the output format is table. If you want to use another one use the -o flag:
+
 ```commandline
-./pullsecret-validator-cli -f /home/alknopfler/pull-secret.json -r quay.io redhat.openshift.io
+./pullsecret-validator-cli -f /home/alknopfler/pull-secret.json -o yaml
 ```
 
 ## Output examples:
@@ -44,5 +51,6 @@ If you want to validate **only a subset** of the whole pull secret file, you cou
 
 This is the CLI (Command Line Interface) version of the pull secret validator
 Also you could use the web version published just only for internal staff
+
 
 

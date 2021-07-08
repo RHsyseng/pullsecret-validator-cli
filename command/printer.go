@@ -14,7 +14,13 @@ const (
 	ColorWhite  = "\033[37m"
 )
 
-func writeOutputTable(result v.WebData, filters []string) {
+type outputJson struct{
+	AuthValid   []string `json:"auth_valid"`
+	AuthExpired []string `json:"auth_expired"`
+	ConnIssues  []string `json:"connection_issues"`
+}
+
+func writeOutputTable(result v.WebData) {
 	t := table.NewWriter()
 	t.SetOutputMirror(os.Stdout)
 	t.AppendHeader(table.Row{string(ColorGreen) + "Valid Auths Entries" + string(ColorWhite), string(ColorRed) + "Expired Auths Entries" + string(ColorWhite), string(ColorYellow) + "Connection Issues" + string(ColorWhite)})
@@ -23,4 +29,13 @@ func writeOutputTable(result v.WebData, filters []string) {
 
 	t.SetStyle(table.StyleLight)
 	t.Render()
+}
+
+func writeOutputJson(result v.WebData, ){
+
+
+}
+
+func writeOutputYaml(result v.WebData, ){
+
 }
