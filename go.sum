@@ -2,6 +2,8 @@ github.com/RHsyseng/lib-ps-validator v0.0.6 h1:7ntGFsJzdscXX96tdmgIMMvGry6OPOkpR
 github.com/RHsyseng/lib-ps-validator v0.0.6/go.mod h1:MjRiAahu9CP4/NHQxb1swaDXh3lSJXPKgKTMNyPb6rs=
 github.com/RHsyseng/lib-ps-validator v0.0.7 h1:pqvM1Gy7nzFdPJgmTjM5Bwe8C2mWObWNjjeo0b44GgU=
 github.com/RHsyseng/lib-ps-validator v0.0.7/go.mod h1:MjRiAahu9CP4/NHQxb1swaDXh3lSJXPKgKTMNyPb6rs=
+github.com/RHsyseng/lib-ps-validator v0.0.8 h1:bffZ8piRiayjodKC7rkZrBERhy5XkfJ0+yU0fEbfqgY=
+github.com/RHsyseng/lib-ps-validator v0.0.8/go.mod h1:MjRiAahu9CP4/NHQxb1swaDXh3lSJXPKgKTMNyPb6rs=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/fzipp/gocyclo v0.3.1 h1:A9UeX3HJSXTBzvHzhqoYVuE0eAhe+aM8XBCCwsPMZOc=
