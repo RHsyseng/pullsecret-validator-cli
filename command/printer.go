@@ -1,10 +1,14 @@
 package command
 
 import (
+	"encoding/json"
 	"fmt"
 	v "github.com/RHsyseng/lib-ps-validator"
 	"github.com/jedib0t/go-pretty/v6/table"
+	"gopkg.in/yaml.v3"
+	_ "gopkg.in/yaml.v3"
 	"os"
+	"strings"
 )
 
 const (
@@ -14,10 +18,12 @@ const (
 	ColorWhite  = "\033[37m"
 )
 
-type outputJson struct{
-	AuthValid   []string `json:"auth_valid"`
-	AuthExpired []string `json:"auth_expired"`
-	ConnIssues  []string `json:"connection_issues"`
+type Output struct {
+	Auths struct {
+		Valid           []string `yaml:"valid" json:"valid"`
+		Expired         []string `yaml:"expired" json:"expired"`
+		ConnectionIssue []string `yaml:"connection_issue" json:"connection_issue"`
+	} `yaml:"auths" json:"auths"`
 }
 
 func writeOutputTable(result v.WebData) {
@@ -31,11 +37,44 @@ func writeOutputTable(result v.WebData) {
 	t.Render()
 }
 
-func writeOutputJson(result v.WebData, ){
+func writeOutputJson(result v.WebData) {
+	ok := strings.Fields(fmt.Sprintf("%v", result.ResultOK))
+	ko := strings.Fields(fmt.Sprintf("%v", result.ResultKO))
+	con := strings.Fields(fmt.Sprintf("%v", result.ResultCon))
 
+	out := Output{
+		Auths: struct {
+			Valid           []string `yaml:"valid" json:"valid"`
+			Expired         []string `yaml:"expired" json:"expired"`
+			ConnectionIssue []string `yaml:"connection_issue" json:"connection_issue"`
+		}{
+			Valid:           ok,
+			Expired:         ko,
+			ConnectionIssue: con,
+		},
+	}
 
+	o, _ := json.Marshal(out)
+	fmt.Println(string(o))
 }
 
-func writeOutputYaml(result v.WebData, ){
+func writeOutputYaml(result v.WebData) {
+	ok := strings.Fields(fmt.Sprintf("%v", result.ResultOK))
+	ko := strings.Fields(fmt.Sprintf("%v", result.ResultKO))
+	con := strings.Fields(fmt.Sprintf("%v", result.ResultCon))
 
+	out := Output{
+		Auths: struct {
+			Valid           []string `yaml:"valid" json:"valid"`
+			Expired         []string `yaml:"expired" json:"expired"`
+			ConnectionIssue []string `yaml:"connection_issue" json:"connection_issue"`
+		}{
+			Valid:           ok,
+			Expired:         ko,
+			ConnectionIssue: con,
+		},
+	}
+
+	o, _ := yaml.Marshal(out)
+	fmt.Println(string(o))
 }

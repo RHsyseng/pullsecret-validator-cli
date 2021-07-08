@@ -42,10 +42,21 @@ By default the output format is table. If you want to use another one use the -o
 
 ## Output examples:
 
+Usage example output:
+
 ![img/img_1.png](img/img_1.png)
 
+The default output format is "table", so if you don't use the -o flag, the output will be shown in a table format
 
 ![img/img.png](img/img.png)
+
+Json format output:
+
+![img/img_2.png](img/img_2.png)
+
+Yaml format output:
+
+![img/img_3.png](img/img_3.png)
 
 ## Reference
 
