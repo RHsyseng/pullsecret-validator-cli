@@ -67,4 +67,5 @@ Also you could use the web version published just only for internal staff
 
 Github actions  deployed to create builds for different Architectures.
 Also, created the asset for releases.
+Just need to create a tag/alias to trigger the github actions
 
