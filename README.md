@@ -63,5 +63,8 @@ Yaml format output:
 This is the CLI (Command Line Interface) version of the pull secret validator
 Also you could use the web version published just only for internal staff
 
+## Developer
 
+Github actions  deployed to create builds for different Architectures.
+Also, created the asset for releases.
 
