@@ -1,0 +1,14 @@
+# github.com/RHsyseng/lib-ps-validator v1.0.3
+## explicit
+github.com/RHsyseng/lib-ps-validator
+# github.com/jedib0t/go-pretty/v6 v6.2.3
+## explicit
+github.com/jedib0t/go-pretty/v6/table
+github.com/jedib0t/go-pretty/v6/text
+# github.com/mattn/go-runewidth v0.0.9
+github.com/mattn/go-runewidth
+# golang.org/x/sys v0.0.0-20180816055513-1c9583448a9c
+golang.org/x/sys/windows
+# gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
+## explicit
+gopkg.in/yaml.v3
