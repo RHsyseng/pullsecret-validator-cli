@@ -3,6 +3,7 @@
 ## Description 
 
 This is a tool to validate the Pull Secret file from the command line interface.
+**This repository and its contents are completely UNSUPPORTED in any way and are not part of official documentation.**
 
 ## Install it (Windows/macOS/Linux)
 
