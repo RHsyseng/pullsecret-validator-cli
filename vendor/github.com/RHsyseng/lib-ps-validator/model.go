@@ -1,5 +1,6 @@
 package lib_ps_validator
 
+//Payload Struct to represent the auth pull secret file structure
 type Payload struct {
 	Auths map[string]struct {
 		Auth  string `json:"auth"`
@@ -7,6 +8,7 @@ type Payload struct {
 	}
 }
 
+//WebData is the representation of the results obtained into the validation process
 type WebData struct {
 	Input     interface{}
 	ResultOK  interface{}
